@@ -29,4 +29,8 @@ export class ProfileService {
       stack: ['react', 'angularsk', 'typescriptsk', 'agressive masturbation']
     };
   }
+
+  getSubscribersShortList() {
+    return this.http.get<Profile[]>(`${this.baseApiUrl}account/subscribers`)
+  }
 }
