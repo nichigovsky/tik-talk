@@ -1,0 +1,22 @@
+<img src="/assets/svg/logo-small.svg" alt="logo" class="ml16 mb20" />
+
+<nav>
+  <ul class="main-menu-list">
+    <li *ngFor="let menuItem of menuItems">
+      <button class="menu-item" [routerLink]="[menuItem.link]">
+        <svg [icon]="menuItem.icon"/>
+        <span>{{ menuItem.label }}</span>
+      </button>
+    </li>
+  </ul>
+
+</nav>
+
+<p class="medium-text mt20">Subscribers</p>
+
+<app-subscriber-card></app-subscriber-card>
+
+<div class="mt20 to-subscribers">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text">All subscribers</a>
+  <svg icon="arrow" class="to-subscribers-icon"/>
+</div>
